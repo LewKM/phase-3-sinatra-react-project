@@ -3,7 +3,9 @@ class ApplicationController < Sinatra::Base
   
   # Add your routes here
   get "/" do
-    { message: "Good luck with your project!" }.to_json
+    # gets all the items from the database
+    # and returns them as a JSON array
+    Item.all.to_json
   end
 
 end
